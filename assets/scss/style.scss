@@ -1,0 +1,196 @@
+// JAI SHREE RAM 
+
+@font-face {
+    font-family: synemedium;
+    src: url(assets/fonts/Syne-Medium.ttf);
+}
+@font-face {
+    font-family: synebold;
+    src: url(assets/fonts/Syne-Bold.ttf);
+}
+
+@mixin light-weight-font {
+    font-weight: 300;
+    opacity: 0.8;
+    text-transform: uppercase;
+    word-spacing: 0.3rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    padding: 1rem;
+}
+main {
+    width: 100%;
+    padding: 1.2rem;
+    padding-top: 3rem;
+    border: 1px solid #000;
+}
+
+.section-1 {
+    width: 100%;
+    padding: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    p {
+        @include light-weight-font;
+    }
+    
+    h1 {
+        font-weight: 500;
+        font-size: 4rem;
+        width: 70%;
+        line-height: 1;
+        font-family: synebold;
+    }
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
+        
+    }
+}
+
+.section-2 {
+    margin: 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+
+    .s2-top {
+
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        p {
+            @include light-weight-font;
+        }
+        
+        h1 {
+            font-weight: 400;
+            font-size: 3.3rem;
+            width: 92%;
+            line-height: 0.9;
+            font-family: synebold;       
+        }
+
+        button {
+            width: fit-content;
+            padding: 0.8rem;
+            border: 0.7rem;
+            border-radius: 0.5em;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            background-color: #000;
+            color: #FDFBF5;
+        }
+    }
+
+    .line {
+        width: 100%;
+        height: 1px;
+        background-color: #141313;
+    }
+
+    .s2-btm {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .elem {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            svg {
+               width: 4rem;
+               aspect-ratio: 1 / 1;
+            }
+
+            h1 {
+                font-weight: 400;
+                font-size: 2.1rem;
+            }
+
+            p {
+                font-weight: 300;
+                opacity: 0.8;
+                line-height: 1.7;
+                word-spacing: 0.1rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1020px) {
+
+    html {
+        font-size: clamp(16px, 1vw, 20px);
+    }
+
+    main {
+        padding: 2.6rem;
+    }
+
+    .section-1 {
+
+        h1 {
+            font-size: 6rem;
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    .section-2 {
+        margin-top: 3.6rem;
+        flex-direction: row;
+ 
+        .s2-top {
+            width: 67%;
+            justify-content: space-between;
+
+            .s2-top-text {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                h1 {
+                    font-size: 5.2rem;
+                    padding: 0rem 0.2rem;
+                }
+            }
+
+
+        }
+        
+        .line {
+            height: initial;
+            width: 1px;
+        }
+        
+        .s2-btm {
+            width: 33%;
+
+            .line {
+                width: 100%;
+                height: 1px;
+                align-self: stretch;
+            }
+        }
+    }
+}
