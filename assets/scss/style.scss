@@ -27,6 +27,10 @@
     color: #FDFBF5;
     cursor: pointer;
 }
+@mixin svgs {
+    width: 4rem;
+    aspect-ratio: 1 / 1;
+}
 
 * {
     margin: 0;
@@ -130,8 +134,7 @@ main {
             gap: 1rem;
 
             svg {
-               width: 4rem;
-               aspect-ratio: 1 / 1;
+                @include svgs;
             }
 
             h1 {
@@ -243,8 +246,7 @@ main {
         gap: 0.6rem;
 
         svg {
-            width: 4.5rem;
-            aspect-ratio: 1 / 1;            
+            @include svgs;            
         }
 
         p {
