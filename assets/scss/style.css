@@ -91,13 +91,14 @@ main .line {
 .section-2 .s2-top button {
   width: -moz-fit-content;
   width: fit-content;
-  padding: 0.8rem;
+  padding: 0.54rem 0.85rem;
   border: 0.7rem;
   border-radius: 0.5em;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   background-color: #000;
   color: #FDFBF5;
+  cursor: pointer;
 }
 .section-2 .line {
   width: 100%;
@@ -239,13 +240,14 @@ main .line {
 .section-4 .s4-part-2 button {
   width: -moz-fit-content;
   width: fit-content;
-  padding: 0.8rem;
+  padding: 0.54rem 0.85rem;
   border: 0.7rem;
   border-radius: 0.5em;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   background-color: #000;
   color: #FDFBF5;
+  cursor: pointer;
 }
 
 @media (min-width: 1020px) {
@@ -291,10 +293,13 @@ main .line {
   .section-3 {
     margin-top: 3rem;
     flex-direction: row;
+    position: relative;
   }
   .section-3 .s3-part-1 {
     width: 32.5%;
     position: sticky;
+    top: 0%;
+    align-self: flex-start;
   }
   .section-3 .s3-part-1 h1 {
     font-weight: 600;
