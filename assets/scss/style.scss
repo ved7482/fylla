@@ -16,6 +16,16 @@
     word-spacing: 0.3rem;
     font-family: 'Poppins', sans-serif;
 }
+@mixin btn {
+    width: fit-content;
+    padding: 0.8rem;
+    border: 0.7rem;
+    border-radius: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    background-color: #000;
+    color: #FDFBF5;
+}
 
 * {
     margin: 0;
@@ -98,14 +108,7 @@ main {
         }
 
         button {
-            width: fit-content;
-            padding: 0.8rem;
-            border: 0.7rem;
-            border-radius: 0.5em;
-            text-transform: uppercase;
-            letter-spacing: 0.1rem;
-            background-color: #000;
-            color: #FDFBF5;
+            @include btn;
         }
     }
 
@@ -222,6 +225,57 @@ main {
     }
 }
 
+.section-4 {
+    width: 100%;
+    margin: 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+
+    .line {
+        display: none;
+    }
+
+    .s4-part-1 {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+
+        svg {
+            width: 4.5rem;
+            aspect-ratio: 1 / 1;            
+        }
+
+        p {
+            margin-top: 1.9rem;
+            @include light-weight-font;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 2.8rem;
+            text-transform: uppercase;
+        }
+    }
+
+    .s4-part-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+
+        p {
+            font-weight: 400;
+            font-size: 1.3rem;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+        
+        button {
+            @include btn;
+        }
+    }
+}
+
 @media (min-width: 1020px) {
 
     html {
@@ -325,6 +379,55 @@ main {
                     }
                 }
             }   
+        }
+    }
+
+    .section-4 {
+        flex-direction: row;
+        height: 80vh;
+        padding: 1.7rem 0rem;
+
+        .line {
+            display: block;
+            height: initial;
+            width: 1px;           
+        }
+
+        .s4-part-1 {
+            width: 67%;
+            position: relative;
+
+            
+            p {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            h1 {
+                font-weight: 500;
+                font-size: 4.8rem;
+                position: absolute;
+                top: 9%;
+                left: 0;            
+            }
+            svg {
+                width: 5rem;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        .s4-part-2 {
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0rem 1.1rem;
+
+            p {
+                font-size: 1.6rem;
+            }
         }
     }
 }
