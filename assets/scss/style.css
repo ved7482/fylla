@@ -255,6 +255,11 @@ footer {
   display: flex;
   flex-direction: column;
 }
+footer .footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 footer .footer-top .footer-part-1 {
   display: flex;
   flex-direction: column;
@@ -390,8 +395,11 @@ footer .footer-btm p {
   html {
     font-size: clamp(16px, 1vw, 20px);
   }
+  .body {
+    padding: 0rem 1rem 1rem 1rem;
+  }
   main {
-    padding: 2.6rem;
+    padding: 2rem 3rem 0rem 3rem;
   }
   .section-1 h1 {
     font-size: 6rem;
@@ -430,6 +438,7 @@ footer .footer-btm p {
     margin-top: 3rem;
     flex-direction: row;
     position: relative;
+    padding: 2rem 0rem;
   }
   .section-3 .s3-part-1 {
     width: 32.5%;
@@ -507,5 +516,55 @@ footer .footer-btm p {
   }
   .section-4 .s4-part-2 p {
     font-size: 1.6rem;
+  }
+  footer {
+    margin: 2rem 0rem;
+  }
+  footer .footer-top {
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    padding: 2.2rem 0rem;
+  }
+  footer .footer-top .line {
+    height: auto;
+    align-self: stretch;
+    width: 1px;
+    background-color: #141313;
+  }
+  footer .footer-top .footer-part-1 {
+    width: 46vw;
+    margin: 0rem;
+    position: relative;
+  }
+  footer .footer-top .footer-part-1 .headings svg:nth-child(1) {
+    width: 3.2rem;
+    aspect-ratio: 1/1;
+  }
+  footer .footer-top .footer-part-1 .address {
+    width: 30%;
+  }
+  footer .footer-top .footer-part-1 .media {
+    position: absolute;
+    bottom: -10%;
+  }
+  footer .footer-top .footer-part-1 .media .elem {
+    width: 8%;
+  }
+  footer .footer-top .footer-part-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0rem;
+    padding: 0rem 2.2rem;
+  }
+  footer .footer-top .footer-part-2 .line {
+    display: none;
+  }
+  footer .footer-btm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
